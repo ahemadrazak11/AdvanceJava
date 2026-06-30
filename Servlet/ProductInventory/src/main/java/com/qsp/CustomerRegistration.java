@@ -1,12 +1,18 @@
 package com.qsp;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/customer")
 public class CustomerRegistration extends HttpServlet{
@@ -26,6 +32,59 @@ public class CustomerRegistration extends HttpServlet{
 		
 		String password = req.getParameter("password");
 		
-		System.out.println("name" + name);
+		
+		Connection connection = null;
+
+	    
+
+	    try {
+
+			Class.forName("org.postgresql.Driver");
+
+			
+
+			connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/ProductInventory?user=postgres&password=root");
+																					   
+			
+
+			PreparedStatement statement = connection.prepareStatement("insert into customer values(?,?,?,?,?,?)");
+
+			statement.setLong(1, id);
+
+			statement.setString(2, name);
+
+			statement.setLong(3, mobile);
+
+			statement.setString(4, email);
+
+			statement.setString(5, username);
+
+			statement.setString(6, password);
+
+			statement.execute();
+			
+			
+			HttpSession session = req.getSession();
+			session.setAttribute("message", "Registration Succeful...!");
+			
+			RequestDispatcher dispatcher = req.getRequestDispatcher("Customer.jsp");
+			dispatcher.include(req, resp);
+			
+	    }
+	    catch (Exception e) {
+	    	e.printStackTrace();
+		}
+	    finally {
+	    	try {
+				connection.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    }
+		
+		
+		
+		
 	}
 }

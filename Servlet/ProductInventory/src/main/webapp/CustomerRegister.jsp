@@ -25,6 +25,7 @@
 Id: <input type="text" name="id"><br><br>
 Name: <input type="text" name="name"><br><br>
 Mobile: <input type="text" name="mobile"><br><br>
+Email: <input type="text" name="email"><br><br>
 Username: <input type="text" name="username"><br><br>
 Password: <input type="text" name="password"><br><br>
 <input type="submit" value="Register">
