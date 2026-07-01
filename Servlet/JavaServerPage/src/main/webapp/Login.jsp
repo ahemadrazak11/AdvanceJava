@@ -41,7 +41,7 @@ setTimeout(function () {
     if (msg != null) {
         msg.style.display = "none";
     }
-}, 5000);   // 5000 ms = 5 seconds
+}, 3000);   //
 </script>
 
 </body>

@@ -1,18 +1,26 @@
 <html>
+<head>
+<link rel="stylesheet" href="css/index.css">
+</head>
 <body>
 
-<h1>Choose Portal</h1>
+<h1>
+	<marquee scrollamount="20">Welcome To Product Inventory</marquee>
+</h1>
 <hr>
-<form action="Customer.jsp">
-<input type="submit" value="Customer Portal">
-</form>
 
-<form action="">
-<input type="submit" value="Employee Portal">
-</form>
-
-<form action="">
-<input type="submit" value="Admin Portal">
-</form>
+<div id="container">
+	<a href="Customer.jsp">
+		<div class="btn">Customer Portal</div>
+	</a>
+	
+	<a href="">
+		<div class="btn">Employee Portal</div>
+	</a>
+	
+	<a href="">
+		<div class="btn">Admin Portal</div>
+	</a>
+</div>
 </body>
 </html>
