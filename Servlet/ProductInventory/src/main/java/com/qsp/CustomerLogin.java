@@ -46,11 +46,19 @@ public class CustomerLogin extends HttpServlet{
 						session.setAttribute("password", password);
 						session.setAttribute("message", "Login Successful...!");
 						
+						
 						RequestDispatcher dispatcher = req.getRequestDispatcher("CustomerHome.jsp");
 						dispatcher.forward(req, resp);
 						
 					}else {
-						resp.getWriter().print("<html><body><h1>Invalid Login User</h1></body></html>");
+						HttpSession session = req.getSession();
+						session.setAttribute("username", username);
+						session.setAttribute("password", password);
+						session.setAttribute("failed", "Invalid username or password...!");
+						session.setAttribute("pass", null);
+						
+						RequestDispatcher dispatcher = req.getRequestDispatcher("CustomerLogin.jsp");
+						dispatcher.include(req, resp);
 					}
 				} catch (Exception e) {
 				// TODO: handle exception
