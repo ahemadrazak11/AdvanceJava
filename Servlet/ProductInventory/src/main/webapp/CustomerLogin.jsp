@@ -68,7 +68,7 @@
 							<i class="fa-solid fa-lock"></i><input type="password" name="password" id="pass" placeholder="Enter your password" required><i class="fa-solid fa-eye-slash"></i>
 						</div>
 						<div class="checked_link_container">
-							<span id="check_container"><input type="checkbox" name="remember" id="check" required> <label for="check">Remember me</label></span>
+							<span id="check_container"><input type="checkbox" name="remember" id="check"> <label for="check">Remember me</label></span>
 							<span><a href="ForgotPassword.jsp">Forgot Password?</a></span>
 						</div>
 						<div id="login_btn">

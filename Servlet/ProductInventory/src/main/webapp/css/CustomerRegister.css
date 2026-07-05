@@ -209,8 +209,8 @@
 		background-color: transparent;
 	}
 	
-	#username, #pass{
-		width: 300px;
+	input[type="text"]:invalid, input[type="email"]:invalid, input[type="password"]:invalid{
+		color: red;
 	}
 	
 	.input_container{
@@ -221,7 +221,7 @@
 	    border-radius: 10px;
 	}
 	
-	#username, #pass{
+	.input_width{
 		width: 312px;
 	}
 	
@@ -260,6 +260,8 @@
 	#bottom_line{
 		    color: #022663;
 	}
+	
+	
 	/*form style end*/
 	
 	
@@ -305,4 +307,5 @@
 		    position: fixed;
 		    right: 10px;
 		    bottom: 0px;
+		    z-index: 10;
 	}

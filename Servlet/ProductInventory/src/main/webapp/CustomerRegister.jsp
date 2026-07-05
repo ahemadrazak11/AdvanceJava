@@ -60,14 +60,14 @@
 							<label for="username">Customer ID</label>
 						</div>
 						<div class="input_container">
-							<i class="fa-solid fa-id-badge"></i><input type="text" name="username" id="username" placeholder="Enter your customer id" autofocus autocomplete required>
+							<i class="fa-solid fa-id-badge"></i><input type="text" name="id" class="input_width" placeholder="Enter your customer id" minlength="3" maxlength="5" autofocus autocomplete required>
 						</div>
 						
 						<div class="label_container">
 							<label for="username">Name</label>
 						</div>
 						<div class="input_container">
-							<i class="fa-solid fa-address-card"></i></i><input type="text" name="username" id="username" placeholder="Enter your name" autocomplete required>
+							<i class="fa-solid fa-address-card"></i></i><input type="text" name="name" class="input_width" minlength="2" maxlength="15" placeholder="Enter your name" autocomplete required>
 						</div>
 						
 						
@@ -75,7 +75,7 @@
 							<label for="username">Mobile</label>
 						</div>
 						<div class="input_container">
-							<i class="fa-solid fa-phone"></i><input type="text" name="username" id="username" placeholder="Enter your mobile" autocomplete required>
+							<i class="fa-solid fa-phone"></i><input type="text" name="mobile" class="input_width" minlength="10" maxlength="10" placeholder="Enter your mobile" autocomplete required>
 						</div>
 						
 						
@@ -83,7 +83,7 @@
 							<label for="username">Email</label>
 						</div>
 						<div class="input_container">
-							<i class="fa-solid fa-at"></i><input type="text" name="username" id="username" placeholder="Enter your email" autocomplete required>
+							<i class="fa-solid fa-at"></i><input type="text" name="email" class="input_width" placeholder="Enter your email" autocomplete required>
 						</div>
 						
 						
@@ -91,7 +91,7 @@
 							<label for="username">Username</label>
 						</div>
 						<div class="input_container">
-							<i class="fa-solid fa-user"></i><input type="text" name="username" id="username" placeholder="Enter your username" autocomplete required>
+							<i class="fa-solid fa-user"></i><input type="text" name="username" class="input_width" minlength="3" maxlength="10" placeholder="Enter your username" autocomplete required>
 						</div>
 						
 						
@@ -99,18 +99,18 @@
 							<label for="pass">Password</label>
 						</div>
 						<div class="input_container">
-							<i class="fa-solid fa-lock"></i><input type="password" name="password" id="pass" placeholder="Enter your password" required><i class="fa-solid fa-eye-slash"></i>
+							<i class="fa-solid fa-lock"></i><input type="password" name="password" class="input_width" minlength="5" maxlength="10" placeholder="Enter your password" required><i class="fa-solid fa-eye-slash"></i>
 						</div>
 						
 						
 						<div class="checked_link_container">
-							<span id="check_container"><input type="checkbox" name="remember" id="check" required> 
+							<span id="check_container"><input type="checkbox" name="remember" id="check"> 
 								<label for="check">I agree to the <span><a href="#">Terms & conditions</a></span>
 								</label>
 							</span>
 						</div>
 						<div id="login_btn">
-							<input type="submit" value="Login">
+							<input type="submit" value="Register">
 						</div>
 					</div>
 				</form>
@@ -121,61 +121,8 @@
 		</article>
 	</div>	
 </div>
-<%
-HttpSession session1 = request.getSession();
-String message = (String) session1.getAttribute("message");
-%>
-
-<% if(message != null){ %>
-
-<div id="notify_container">
-<b id="message"><%= message %></b>
-</div>
-
-<%
-    // Remove the message after displaying it once
-    session1.removeAttribute("message");
-%>
-
-<% } %>
-
-
-
-
-<%
-HttpSession session2 = request.getSession();
-String failed = (String) session2.getAttribute("failed");
-String pass = (String) session2.getAttribute("pass");
-%>
-
-<% if(failed != null){ %>
-
-<div id="notify_container" style="color: red;">
-	<b id="message"><%= failed %></b>
-</div>
-
-<%
-    // Remove the message after displaying it once
-    session2.removeAttribute("message");
-%>
-
-<% } 
-
-else if(pass != null) { %>
-
-<div id="notify_container" style="color: green;">
-	<b id="message"><%= pass %></b>
-</div>
-
-<%
-    // Remove the message after displaying it once
-    session2.removeAttribute("message");
-%>
-
-<% } %>
 </section>
 </main>
-
 <footer>
 <div id="footer_container">
 	<p>
@@ -184,46 +131,5 @@ else if(pass != null) { %>
 	</p>
 </div>
 </footer>
-<script>
-setTimeout(function () {
-    let msg = document.getElementById("message");
-
-    if (msg != null) {
-        msg.style.display = "none";
-    }
-}, 3000);   // 3000 ms = 3 seconds
-</script>
-
-
-
-
-
-<a href="Customer.jsp" style="text-decoration: none;">
-<div style="width: 70px; height: 70px; background-color: navy; border-radius: 50%;">
-<span style="color: white; font-size: 50px; padding: 10px">&leftarrow;</span>
-</div>
-</a>
-<h1>Registration Form</h1>
-
-
-
-
-
-<form action="customer">
-Id: <input type="text" name="id"><br><br>
-Name: <input type="text" name="name"><br><br>
-Mobile: <input type="text" name="mobile"><br><br>
-Email: <input type="text" name="email"><br><br>
-Username: <input type="text" name="username"><br><br>
-Password: <input type="text" name="password"><br><br>
-<input type="submit" value="Register">
-</form>
-
-Alreadu have an account? <a href="CustomerLogin.jsp">Click here</a>
-
-
-
-
-
 </body>
 </html>

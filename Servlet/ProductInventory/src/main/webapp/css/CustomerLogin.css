@@ -94,7 +94,7 @@
 		    padding: 45px 10px 10px 10px;
 		    background-color: white;
 		    width: 35%;
-		    height: 500px;
+		    height: 530px;
 		    border-radius: 10px;
 	}
 	
@@ -209,10 +209,6 @@
 		background-color: transparent;
 	}
 	
-	#username, #pass{
-		width: 300px;
-	}
-	
 	.input_container{
 		border: 1px solid gray;
 	    padding: 10px 10px;
@@ -305,4 +301,5 @@
 		    position: fixed;
 		    right: 10px;
 		    bottom: 0px;
+		    z-index: 10;
 	}
