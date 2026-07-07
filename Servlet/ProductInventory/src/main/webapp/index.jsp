@@ -62,7 +62,7 @@
 				<div class="card_images"><i class="fa-solid fa-suitcase"></i></div>
 				<div class="card_headings">Employee Portal</div>
 				<div class="card_descriptions">Access internal resources, manage tasks, view schedules and stay updated with company news.</div>
-				<div><a href=""><div class="card_buttons" id="employee_btn">Access Employee Portal <i class="fa-solid fa-arrow-right"></i></div></a></div>
+				<div><a href="EmployeeLogin.jsp"><div class="card_buttons" id="employee_btn">Access Employee Portal <i class="fa-solid fa-arrow-right"></i></div></a></div>
 			</div>
 		</article>
 	</div>

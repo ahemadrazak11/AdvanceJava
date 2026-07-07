@@ -84,7 +84,5 @@ public class CustomerRegistration extends HttpServlet{
 	    }
 		
 		
-		
-		
 	}
 }
