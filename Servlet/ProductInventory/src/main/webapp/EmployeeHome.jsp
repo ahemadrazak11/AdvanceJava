@@ -80,7 +80,7 @@ else{
 
 
 <div>
-<a href="">Update Product</a>
+<a href="UpdateProduct.jsp">Update Product</a>
 </div>
 
 <div>

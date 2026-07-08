@@ -26,8 +26,6 @@ public class EmployeeLogin extends HttpServlet{
 		        String password = req.getParameter("password");
 		        
 		        Connection con = null;
-		        System.out.println("Username: " + username);
-		        System.out.println("Password: " + password);
 		        
 		        // check user uname and password present or not 
 			try {
