@@ -35,7 +35,6 @@ Product ID: <input type="text" name="id"><br><br>
 <h1><%= message1 %></h1>
 
 
-
 <form action="UpdateOption.jsp">
 
 <select name="option">

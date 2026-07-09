@@ -41,6 +41,31 @@ String message = (String) session1.getAttribute("message");
 <% } %>
 
 
+
+		<div>
+		<a href="">Get Product By ID</a>
+		</div>
+		
+		
+		<div>
+		<a href="">Get All Product</a>
+		</div>
+		
+		
+		<div>
+		<a href="AddProduct.jsp">Add Product</a>
+		</div>
+		
+		
+		<div>
+		<a href="UpdateProduct.jsp">Update Product</a>
+		</div>
+		
+		<div>
+		<a href="">Delete Product</a>
+		</div>
+
+
 <script>
 setTimeout(function () {
     let msg = document.getElementById("message");
@@ -60,32 +85,6 @@ else{
 }
 %>
 
-
-
-
-
-<div>
-<a href="">Get Product By ID</a>
-</div>
-
-
-<div>
-<a href="">Get All Product</a>
-</div>
-
-
-<div>
-<a href="AddProduct.jsp">Add Product</a>
-</div>
-
-
-<div>
-<a href="UpdateProduct.jsp">Update Product</a>
-</div>
-
-<div>
-<a href="">Delete Product</a>
-</div>
 
 </body>
 </html>
