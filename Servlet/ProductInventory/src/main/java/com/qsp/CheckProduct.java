@@ -40,13 +40,14 @@ public class CheckProduct extends HttpServlet{
 				
 				session.setAttribute("id", id);
 				session.setAttribute("message1", "ID Found...!");
-				
+				session.setAttribute("message2", null);
 				
 				RequestDispatcher dispatcher = req.getRequestDispatcher("UpdateProduct.jsp");
 				dispatcher.include(req, resp);
 				
 			}else {
 				session.setAttribute("message2", "ID Not Found...!");
+				session.setAttribute("message1", null);
 				
 				RequestDispatcher dispatcher = req.getRequestDispatcher("UpdateProduct.jsp");
 				dispatcher.include(req, resp);

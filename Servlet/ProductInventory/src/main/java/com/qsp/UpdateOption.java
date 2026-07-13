@@ -65,7 +65,7 @@ public class UpdateOption extends HttpServlet{
 					
 					if(!query) {
 						
-						session.setAttribute("message", "Product Updated...!");
+						session.setAttribute("message", "Product Updated Successfully...!");
 						RequestDispatcher dispatcher = req.getRequestDispatcher("EmployeeHome.jsp");
 						dispatcher.forward(req, resp);
 						

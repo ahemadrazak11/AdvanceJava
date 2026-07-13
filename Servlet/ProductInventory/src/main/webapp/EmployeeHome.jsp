@@ -48,7 +48,7 @@ String message = (String) session1.getAttribute("message");
 		
 		
 		<div>
-		<a href="">Get All Product</a>
+		<a href="displayallproduct">Get All Product</a>
 		</div>
 		
 		
