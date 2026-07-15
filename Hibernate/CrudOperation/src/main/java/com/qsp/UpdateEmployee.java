@@ -13,11 +13,11 @@ public class UpdateEmployee {
 		   EntityManager entityManager = entityManagerFactory.createEntityManager();
 		   EntityTransaction transaction = entityManager.getTransaction();		   
 
-		   Employee employee = entityManager.find(Employee.class, 105);
+		   Employee employee = entityManager.find(Employee.class, 101);
 		   
 		   if(employee != null) {
 			   
-			   employee.setName("Khan");
+			   employee.setName("Bcd");
 			   employee.setEmail("khan@gmail.com");
 			   
 			   transaction.begin();

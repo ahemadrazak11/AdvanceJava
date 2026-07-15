@@ -14,7 +14,7 @@ public class SaveEmployee {
 		   EntityTransaction transaction = entityManager.getTransaction();
 		   
 		   Employee emp1 = new Employee();
-		   emp1.setId(100);
+		   emp1.setId(103);
 		   emp1.setName("Ahemad");
 		   emp1.setSal(9000.5);
 		   emp1.setMobile(9067831610l);
@@ -22,7 +22,7 @@ public class SaveEmployee {
 		   
 		   Employee emp2 = new Employee();
 		   
-		   emp2.setId(101);
+		   emp2.setId(104);
 		   emp2.setName("Raza");
 		   emp2.setSal(9110.5);
 		   emp2.setMobile(9977886655l);
