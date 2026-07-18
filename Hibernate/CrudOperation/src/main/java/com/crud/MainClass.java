@@ -33,7 +33,7 @@ public class MainClass {
 			break;
 			
 		case 2:
-			System.out.println("Update");
+			service.update();
 			break;
 			
 		case 3:

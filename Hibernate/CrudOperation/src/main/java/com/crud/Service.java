@@ -12,8 +12,8 @@ import com.qsp.Employee;
 
 interface IService{
 	
-	public void save();
-//	void update();
+	void save();
+	void update();
 //	void delete();
 //	void getById();
 //	void getAllData();
@@ -32,6 +32,8 @@ public class Service implements IService{
 	   
 	   Employee emp1 = new Employee();
 	   Scanner sc = new Scanner(System.in);
+	   
+	   // Insert Operation.
 	   @Override
 	   public void save() {
 		   
@@ -78,6 +80,68 @@ public class Service implements IService{
 		
 	   }
 	   
+	  // Update Operation.
+	  @Override
+	  public void update() {
+		  
+		  System.out.println("Enter the Employee ID:");
+		  int empID = sc.nextInt();
+		  
+		  Employee employee = entityManager.find(Employee.class, empID);
+		  
+		  if(employee != null) {
+			  
+			  	System.out.println("1. Update Name");
+				System.out.println("2. Update Salary");
+				System.out.println("3. Update Mobile");
+				System.out.println("4. Update Email");
+				System.out.print("Enter Your Choise: ");
+				int num = sc.nextInt();
+				
+			  switch (num) {
+				case 1:	
+					
+					System.out.print("Enter the Name: ");
+					sc.nextLine();
+					String name = sc.nextLine();
+					employee.setName(name);
+					break;
+					
+				case 2:
+					System.out.print("Enter the Salary: ");
+					Double sal = sc.nextDouble();
+					employee.setSal(sal);
+					break;
+					
+				case 3:
+					System.out.print("Enter the Name: ");
+					sc.nextLine();
+					long mobile = sc.nextLong();
+					employee.setMobile(mobile);
+					break;
+				
+				case 4:
+					System.out.print("Enter the Name: ");
+					sc.nextLine();
+					String email = sc.nextLine();
+					employee.setName(email);
+					break;
+
+				default:
+					System.out.println("Invalid Input");
+					break;
+			  }
+			  
+			  
+			  	transaction.begin();
+				entityManager.persist(employee);
+				transaction.commit();
+				System.out.println("Data Updated Successfully...!");
+			}
+		  else {
+			  System.out.println("Employee Not Found...!");
+		  }
+	   }
 	   
 	
 }
