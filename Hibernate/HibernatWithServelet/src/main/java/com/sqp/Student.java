@@ -2,11 +2,13 @@ package com.sqp;
 
 import java.util.List;
 
+import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Entity
+@Cacheable
 public class Student {
 
 	@Id
