@@ -13,13 +13,17 @@ public class StudentDriver {
 		
 		Student  s = (Student) context.getBean("student");
 		
-		//System.out.println(s);
+		System.out.println(s);
 		
 		System.out.println(s.getId());
 		System.out.println(s.getName());
-		System.out.println(s.getCourse());
 		
 		List<Course> c = s.getCourse();
+		
+		for( Course course : c) {
+			
+			System.err.println(course.getName() + " : " + course.getFees());
+		}
 		
 		
 	}
