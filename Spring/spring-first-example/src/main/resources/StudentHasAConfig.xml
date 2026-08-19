@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+	<bean id="java" class="com.hasarelationship.constructor.Course">
+		<property name="name" value="Java"></property>
+		<property name="fees" value="1000.0"></property>
+	</bean>
+	
+	<bean id="sql" class="com.hasarelationship.constructor.Course">
+		<property name="name" value="SQL"></property>
+		<property name="fees" value="900.0"></property>
+	</bean>
+	
+	<bean id="python" class="com.hasarelationship.constructor.Course">
+		<property name="name" value="Python"></property>
+		<property name="fees" value="1110.0"></property>
+	</bean>
+	
+	
+	<bean id="student" class="com.hasarelationship.constructor.Student">
+		<property name="id" value="101"></property>
+		<property name="name" value="Raza"></property>	
+		<property name="course">
+			<list>
+				<ref bean="java"/>
+				<ref bean="sql"/>
+				<ref bean="python"/>
+			</list>		
+		</property>
+	</bean>
+	
+	
+</beans>
