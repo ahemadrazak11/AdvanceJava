@@ -13,7 +13,7 @@ public class StudentDriver {
 		
 		Student  s = (Student) context.getBean("student");
 		
-		System.out.println(s);
+//		System.out.println(s);
 		
 		System.out.println(s.getId());
 		System.out.println(s.getName());
